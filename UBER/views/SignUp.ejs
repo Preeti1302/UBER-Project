@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js ">
+<!--<![endif]-->
+<head>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Sign Up To Drive With Uber - Earn Cash With Your Car</title>
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta property="fb:app_id" content="277064115737714" />
+<meta property="og:image"
+	content="//d1a3f4spazzrp4.cloudfront.net/facebook/hd_shareimage.png">
+<meta property="og:title"
+	content="Sign Up To Drive With Uber - Earn Cash With Your Car">
+<meta property="og:description"
+	content="Drive with Uber and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.">
+<meta name="description"
+	content="Drive with Uber and earn great money as an independent contractor. Get paid weekly just for helping our community of riders get rides around town. Be your own boss and get paid in fares for driving on your own schedule.">
+
+<script src="angularjs/uberAngular.js"></script>
+<style>
+img {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+}
+</style>
+<link href="/stylesheets/SignUp1.css" rel="stylesheet">
+<link rel="stylesheet" href="/stylesheets/SignUp2.css" />
+<link rel="stylesheet" href="/stylesheets/SignUp3.css" />
+
+</head>
+
+<body class=" " ng-app="UberApp" ng-controller="UberCtrl">
+	<section class="wrapper">
+		<header class="contextual" bgcolor="Black">
+			<div class="logo"></div>
+			<div
+				class="signup-to-ride position--absolute push-tiny text--uppercase flex--vertical-center">
+				<span class="signup-to-ride-prompt push-small--right">Not
+					interested in driving?</span> <a href="https://get.uber.com"
+					target="_blank"
+					class="signup-to-ride-btn btn btn--tiny btn--tertiary push-small--right">Sign
+					Up to Ride</a>
+			</div>
+
+		</header>
+
+		<section class="content ">
+
+			<section class="hero billboard white-car-bg defer_css_image_loading">
+				<div class="backimage">
+					<section class="messaging">
+						<section class="container">
+							<section class="row">
+								<article class="col-md-8 header-text">
+									<h1 class="hero-title">Uber Needs Partners Like You.</h1>
+									<p class="hero-description ">Drive with Uber and earn great
+										money as an independent contractor. Get paid weekly just for
+										helping our community of riders get rides around town. Be your
+										own boss and get paid in fares for driving on your own
+										schedule.</p>
+								</article>
+							</section>
+						</section>
+					</section>
+					<section class="hero-box">
+						<section class="row">
+							<article class="col-md-4 col-md-offset-8">
+								<div class="hero-box-container">
+									<form id="driver-lead-form"
+										class="form-unlabeled js-submit-form" name="myForm" novalidate>
+										<article class="error-list hidden">
+											<ul class="error-list-container">
+											</ul>
+										</article>
+										<div class="box-title">
+											<h5 class="winged-title subtitle">
+												<span>Sign Up To Drive</span>
+											</h5>
+										</div>
+										<div data-js="login-info" class="login-group not_user">
+											<a
+												class="btn rounded btn-primary cta-btn js-cta-hero hard--sides"
+												id="login" href="/driverLogin">
+												<div class="uber-img">Already have an account?</div>
+											</a>
+											<div class="box-title">
+												<h5 class="winged-title subtitle small">
+													<span>Or create a new account</span>
+												</h5>
+											</div>
+										</div>
+
+										<div class="form-info">
+											<div class="form-group   ">
+												<div class="row form-row">
+													<div
+														class="col-md-6 col-xs-6 md-push-right-half xs-push-right-half">
+														<input type="text" value="" name="first_name"
+															ng-model="first_name" id="first_name" autofocus
+															placeholder="First Name" required>
+														<div class="error-notice"></div>
+													</div>
+													<div
+														class="col-md-6 col-xs-6 md-push-left-half xs-push-left-half">
+														<input type="text" value="" name="last_name"
+															id="last_name" ng-model="last_name"
+															placeholder="Last Name" required>
+														<div class="error-notice"></div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group  ">
+												<input type="email" value="" name="email" id="email"
+													ng-model="email" placeholder="name@example.com" required>
+												<span style="color: red"
+													ng-show="myForm.email.$dirty && myForm.email.$invalid">
+													<span ng-show="myForm.email.$error.required">Email
+														Id is required.</span> <span ng-show="myForm.email.$error.email">Invalid
+														Email</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+											<div class="form-group  ">
+												<input type="tel" value="" name="contactinfo"
+													maxlength="12" minlength="10" ng-model="contactinfo"
+													id="contactinfo" placeholder="Phone" required> <span
+													style="color: red" ng-show="myForm.contactinfo.$dirty">
+													<span ng-show="myForm.contactinfo.required">Phone
+														number is required.</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+											<div class="form-group  ">
+												<input type="password" value="" name="password"
+													id="password" ng-model="password"
+													placeholder="Password (At least 5 characters)" required>
+												<span style="color: red"
+													ng-show="myForm.password.$dirty && myForm.password.$invalid">
+													<span ng-show="myForm.password.$error.required">Password
+														is required.</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+											<div class="form-group  ">
+												<input type="text" value="" name="address" id="address"
+													ng-model="address" placeholder="Address" required>
+												<span style="color: red" ng-show="myForm.address.$dirty">
+													<span ng-show="myForm.address.required">Address is
+														required.</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+											<div class="form-group  ">
+												<input type="text" value="" name="city_name" id="city_name"
+													ng-model="city_name" placeholder="City" required> <span
+													style="color: red" ng-show="myForm.city_name.$dirty">
+													<span ng-show="myForm.city_name.required">City Name
+														is required.</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+											<div class="form-group  ">
+												<input type="text" value="" name="state" id="state"
+													ng-model="state" placeholder="State" required> <span
+													style="color: red" ng-show="myForm.state.$dirty"> <span
+													ng-show="myForm.state.required">State is required.</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+											<div class="form-group  ">
+												<input type="text" value="" name="zip_code" id="zip_code"
+													ng-model="zip_code" placeholder="Zip Code" required>
+												<span style="color: red" ng-show="myForm.zip_code.$dirty">
+													<span ng-show="myForm.zip_code.required">Zip Code is
+														required.</span>
+												</span>
+												<div class="error-notice"></div>
+											</div>
+										</div>
+
+										<div class="col-md-12" style="margin: 10px;">
+											<div class="alert alert-danger" ng-hide="invalid_signup">
+												<strong>Unable to signup</strong>
+											</div>
+											<div class="alert alert-danger" ng-hide="unexpected_error">
+												<strong>Unexpected error, try again</strong>
+											</div>
+											<div class="alert alert-danger" ng-hide="success_signup">
+												<strong>SignUp Successful. Go to Login Page !!</strong>
+											</div>
+										</div>
+
+										<div class="row submit">
+											<div class="col-md-12">
+												<div class="form-group">
+													<button type=""
+														class="btn btn-primary drive_signup_submit_button"
+														ng-click="signUpDr();">
+														<span
+															class="preloader preloader--negative preloader--medium center-block hidden"
+															id="submitButtonPreloader"></span>
+														<div id="submitButtonText">Sign Up</div>
+													</button>
+												</div>
+											</div>
+
+											<div class="commercial-partner-row push-small--top">
+												<input type="checkbox" class="checkbox-input"
+													name="is_commercial_partner" id="is_commercial_partner" />
+												<label class="checkbox" for="is_commercial_partner">I
+													plan to drive a livery or taxi vehicle.</label>
+											</div>
+
+											<p>
+												By proceeding, I agree that Uber or its representatives may
+												contact me by email, phone, or SMS (including by automatic
+												telephone dialing system) at the email address or number I
+												provide, including for marketing purposes. I have read and
+												understand the relevant <a
+													href="https://www.uber.com/legal/privacy/drivers-us">Driver
+													Privacy Statement.</a> <br> <br> <br>Stated
+												earnings where location is not specified are based on median
+												national earnings of partners in the past month. Actual
+												earnings may vary depending on time of day, location and
+												other factors.
+											</p>
+										</div>
+								</div>
+								</form>
+				</div>
+				</article>
+			</section>
+		</section>
+	</section>
+	<section class="container main">
+		<article class="row feature-row">
+			<div class="col-md-3">
+				<br> <br> <br> <br> <br> <br> <br>
+				<br> <br> <br>
+				<div class="gfx gfx-money defer_css_image_loading"></div>
+
+			</div>
+			<div class="col-md-5">
+				<br> <br> <br> <br> <br> <br> <br>
+				<br> <br> <br>
+
+				<h3>Make good money.</h3>
+				<p>Got a car? Turn it into a money machine. The city is buzzing
+					and Uber makes it easy for you to cash in on the action. Plus,
+					you've already got everything you need to get started.</p>
+			</div>
+		</article>
+		<article class="row feature-row">
+			<div class="col-md-3">
+				<div class="gfx gfx-time defer_css_image_loading"></div>
+			</div>
+			<div class="col-md-5">
+				<h3>Drive when you want.</h3>
+				<p>Need something outside the 9 to 5? As an independent
+					contractor with Uber, you’ve got freedom and flexibility to drive
+					whenever you have time. Set your own schedule, so you can be there
+					for all of life’s most important moments.</p>
+			</div>
+		</article>
+		<article class="row feature-row">
+			<div class="col-md-3">
+				<div class="gfx gfx-freedom defer_css_image_loading"></div>
+			</div>
+			<div class="col-md-5">
+				<h3>No office, no boss.</h3>
+				<p>Whether you’re supporting your family or saving for something
+					big, Uber gives you the freedom to get behind the wheel when it
+					makes sense for you. Choose when you drive, where you go, and who
+					you pick up.</p>
+			</div>
+		</article>
+	</section>
+	<section>
+		<div class="modal fade" id="commercial-modal" tabindex="-1"
+			role="dialog" aria-labelledby="commercial-modal-label"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="commercial-modal-label">Confirm
+							your commercial account</h4>
+					</div>
+					<div class="modal-body">
+						<div class="commercial-img"></div>
+						You plan to drive or operate a commercially insured livery
+						vehicle. Or, you plan to drive a licensed and certified commercial
+						taxi.
+					</div>
+					<div class="modal-footer">
+
+						<a class="btn rounded btn-primary btn-modal yes-commercial"
+							id="yes-commercial" data-dismiss="modal">Yes, sign up for a
+							commercial account</a> <a class="btn rounded btn-default btn-modal"
+							data-dismiss="modal">No, take me back</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer></footer>
+	</section>
+	</section>
+<body>
+</html>

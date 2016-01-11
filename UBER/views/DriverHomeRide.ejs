@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="maps.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="stylesheets/styleDriver.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="angularjs/uberAngular.js"></script>
+<style>
+.uberFont {
+	font-family: ff-clan-web-pro-wide;
+	font-style: normal;
+	font-size: 16px
+}
+
+.uberFontBig {
+	font-family: ff-clan-web-pro-wide;
+	font-style: normal;
+	font-size: 31px
+}
+</style>
+
+<body ng-app="UberApp" ng-controller="UberCtrl">
+
+	<div class="container-fluid" >
+
+		<div class="row">
+
+			<div class="col-sm-9"
+				style="background-color: #000000; min-height: 100px;">
+				<img class="img-responsive" src="/images/uberBlackStrip.JPG" />
+			</div>
+			<div class="col-sm-3 nopadding"
+				style="min-height: 100px; background-color: #000000;">
+				<button class="btn btn-default dropdown-toggle btn-lg" type="button"
+					id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"
+					style="margin: 21px 50px 4px 20px; background-color: #000000; color: #ffffff; border: 0; padding: 12px 22px;">
+					<%= data[0].firstName %> <%= data[0].lastName%> <span class="caret"></span>
+					
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					
+					<li role="separator" class="divider"></li>
+					<li><a href="#">My trips</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="/redirectToDrProfile">Profile</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Payment</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="/logout">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-2 col-sm-offset-1"
+				style="min-height: 500px; padding-right: 0px; padding-left: 0px">
+				<ul class="left-sidebar"
+					style="width: 100%; height: 100%; margin-bottom: 0px; webkit-padding-start: 40px;">
+					<li class="user-image"><img src="/images/userImage.JPG"
+						alt="User name"></li>
+					<li><a class="dropdown-item" style="text-decoration: none;"
+						href="#" ng-click="goToRideHistory();">Ride History</a></li>
+					<li><a class="dropdown-item" style="text-decoration: none;"
+						href="#" ng-click="section(2)">Rate a User</a></li>
+					<li><a class="dropdown-item" style="text-decoration: none;"
+						href="/redirectToDrProfile">See and Edit Profile</a></li>
+					<li><a class="dropdown-item" style="text-decoration: none;"
+						href="#" ng-click="section(4)">Payment</a></li>
+					<li><a class="dropdown-item" style="text-decoration: none;"
+						href="#" ng-click="section(5)">View your Rating</a></li>
+					<li><a class="dropdown-item" style="text-decoration: none;"
+						href="/logout" ng-click="logout()">Log Out</a></li>
+				</ul>
+
+			</div>
+
+			<section id="section1">
+				<div class="col-sm-7"
+					style="min-height: 500px; padding-right: 0px; padding-left: 0px"
+					id="mapdivision" align="centre">
+
+					<form class="form-horizontal">
+
+						<div class="form-group">
+							<div class="form-group">
+								<br>
+								<br>
+								<form  method="get" action="/billInfo">
+									<p align="center">You have a RIDE request</p>
+									<p  align="center"><button type="submit" >End a Ride</button></p>
+								</form>
+							</div>
+
+							
+						</div>
+					</form>
+				</div>
+
+			</section>
+
+			<section id="section1" ></section>
+
+			<section id="section1" >
+				<div class="col-sm-7"
+					style="min-height: 50px; padding-right: 0px; padding-left: 0px">
+
+				</div>
+			</section>
+
+			<section id="section1" ></section>
+
+			<section id="section1" ></section>
+
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12"
+				style="padding-right: 0px; padding-left: 0px; background-color: #000000;">
+				<img class="img-responsive"
+					style="width: = 1349px; height: 149px; border-right: 0px; padding-right: 0px;"
+					src="/images/bottomStrip_customer	.JPG" />
+			</div>
+
+		</div>
+
+	</div>
+	
+</body>
+
+</html>

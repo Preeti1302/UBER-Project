@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="no-js" dir="ltr">
+<head prefix="og:http://ogp.me/ns#">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Driver Partner Dashboard | Uber</title>
+<link rel="shortcut icon"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/images/favicon.3eb352c8f26c2652495fa86bd0e29063.ico" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/main.0ffdbda30a579e1d1dba3afb6ff61adb.css">
+<meta name="description"
+	content="Manage your Uber Driving Partner account.">
+<link rel='stylesheet'
+	href='https://d1a3f4spazzrp4.cloudfront.net/uber-fonts/2.0.1/fresh.css' />
+<link rel='stylesheet' href='/stylesheets/driverUber.css' />
+
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/onboarding.2d680666a6b507e0761f8694f3585aee.css">
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/onboarding_superfine.2f451f0e14db9cffe04e9bf5ec003972.css">
+<link
+	href="//d1a3f4spazzrp4.cloudfront.net/uber-icons/3.0.0/uber-icons.css"
+	rel="stylesheet">
+<input type="hidden" name="_csrf_token"
+	value="1448094015-01-m0r0Oo9eCT1AsvhKnE0Tle5b_0x-ich03TuZjEyClhA=">
+<script src="angularjs/uberAngular.js"></script>
+
+</head>
+<body ng-app="UberApp" ng-controller="UberCtrl">
+	<div class="header position--fixed soft-small" id="header">
+		<div
+			class="layout__item one-half portable-five-sixths float-left hard">
+			<span><i
+				class="icon icon_uber-u header__uber-logo text--white"></i></span> <span
+				class="push-small--left text--white align--middle text--uppercase delta">Safety</span>
+		</div>
+	</div>
+
+	<div class="body-section primary-font with-subheader">
+
+		<div id="sidebar">
+
+			<div class="dashboard-drawer">
+				<ul class="dashboard-nav">
+					<li class="dashboard-nav__submenu flush"><a href="/user"
+						class="dashboard-nav__link"> <span
+							class="icon icon_car-uberx dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Vehicle Information</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item active"><a
+						href="/background-check" class="dashboard-nav__link"> <span
+							class="icon icon_id-card dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Background Check</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item"><a href="/documents"
+						class="dashboard-nav__link"> <span
+							class="icon icon_file dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Document Upload</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item"><a href="/video"
+						class="dashboard-nav__link"> <span
+							class="icon icon_picture dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Welcome Video</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+				</ul>
+
+			</div>
+		</div>
+		<div class="content-section clearfix">
+			<div class="step-content step-content-none">
+				<div class="content-body">
+
+					<div id="background-check" class="bonjour">
+						<div
+							class="step-container position--relative portable-one-whole panel">
+							<div class="panel__content soft">
+								<div class="step-image center-block"></div>
+								<div
+									class="title primary-font primary-font--semibold gamma push--bottom">To
+									ensure driver and passenger safety, we perform a quick
+									background check.</div>
+								<div>
+									<div class="push-small--bottom">
+										<label class="label">Social Security Number</label>
+										<div class="input-group icon-input right">
+											<div class="layout layout--middle layout--flush">
+												<div class="layout__item one-sixth portable-one-quarter">
+													<div>
+														<input class="text-input text-center" value="" name="ssn1"
+															id="ssn1" ng-model="ssn1" placeholder="XXX" maxlength="3"
+															type="text">
+													</div>
+												</div>
+												<div
+													class="layout__item one-twentyfourth soft-small--bottom text--center">-</div>
+												<div class="layout__item one-eighth portable-one-sixth">
+													<div>
+														<input class="text-input text-center" value="" name="ssn2"
+															id="ssn2" ng-model="ssn2" placeholder="XX" maxlength="2"
+															type="text">
+													</div>
+												</div>
+												<div
+													class="layout__item one-twentyfourth soft-small--bottom text--center">-</div>
+												<div class="layout__item one-fifth portable-one-third">
+													<input class="text-input text-center" value="" name="ssn3"
+														id="ssn3" ng-model="ssn3" placeholder="XXXX" maxlength="4"
+														type="text">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul
+									class="check-list check-list__checkmark flush--bottom epsilon">
+									<li class="flush soft-tiny--left">Remains private - never
+										shared</li>
+									<li class="flush soft-tiny--left">Information is safe and
+										secure</li>
+									<li class="flush soft-tiny--left">No credit check - credit
+										won’t be affected</li>
+								</ul>
+							</div>
+							<div class="cta-container text-center soft-small">
+								<button type="primary" icon="" ng-click="backgroundcheck();"
+									class="btn btn--full btn--primary btn--large">Continue</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script type='text/javascript'
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/vendor.7c88512201ad36e1f9d9ff0e6d2077c8.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/analytics.3fcf9f4e2330deaa7efa162289df9e1a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/config.12a9959a1bdf7bcf0055e0f61fe3285a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/core.0e83e860909b037c9135ae70b145e2d8.js"></script>
+
+	<script type="text/javascript">
+			if (window.mixpanel && window.mixpanel.identify) {
+				mixpanel.identify('709aa72f-6044-4883-95f1-b62f07e9536c');
+			}
+
+			window.headerTitle = "Safety";
+			window.isMobileDevice = false;
+			window.userDevice = "desktop";
+			window.globalGenghisStrings = {
+				"email_us" : "Email us.",
+				"logout" : "Sign Out",
+				"need_help" : "Need Help?"
+			};
+		</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/vendor/phoneparser.9f4d21759fadd3db595bc16134bf2c02.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/you-tube-api-player.a702d2e2a090f8b2b8a673d6b35257b1.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/dashboard.1ead9aa417ac42699711cd318041cb52.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/dashboard_lite.a85b0eeb0d73495757942cf8b5139e8a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/header.00c9ac6d95c29457557e5a07fd8aeeb1.js"></script>
+
+	<script type="text/javascript">
+		<!--	window.disclaimerTexts = {
+				"acceptText" : "I acknowledge and agree that I have read and understand this BACKGROUND CHECK DISCLOSURE and further acknowledge that I have read, understand and agree with the statements contained in the ADDITIONAL BACKGROUND CHECK DISCLOSURE and this BACKGROUND CHECK AUTHORIZATION. I agree that I am providing my electronic signature and that my electronic signature is binding just like a signature in ink.",
+				"terms" : [
+						{
+							"content" : "Rasier, LLC/Portier, LLC (\u201cRasier/Portier\u201d), the entity that contracts with drivers who provide peer-to-peer transportation requested through the Uber app, is committed to safety. As part of that commitment, Rasier/Portier may now, or at any time while you are an independent transportation provider (\u201cTransportation Provider\u201d) with an independent contractor relationship (\u201cI/C Relationship\u201d) with Rasier/Portier, verify information within your proposal to enter into or maintain an I/C Relationship, r\u00e9sum\u00e9 or contract by obtaining a consumer report and/or investigative consumer report (background check) from a consumer reporting agency (\u201cCRA\u201d). \u003cp\u003eI have carefully read and understand the Background Check Disclosure and by my electronic signature authorize Rasier/Portier to obtain a background check about me from a CRA in connection with my proposal to enter an I/C Relationship. Rasier/Portier obtains background checks from Checkr, Inc. located at 2505 Mariposa Street, San Francisco, CA 94110 - 1-844-824-3257 - Privacy policy: https://checkr.io/privacy.\u003c/p\u003e \u003cp\u003eAs allowed by law, I understand and agree that Rasier/Portier may obtain additional background checks without a new authorization from me (1) during my I/C Relationship with Rasier/Portier, if any, and (2) from CRAs other than Checkr.\u003c/p\u003e",
+							"title" : "Background Check Disclosure"
+						},
+						{
+							"content" : "CALIFORNIA: You have a right to view the file that the CRA has with your information, and order a copy of their file, upon submitting proper identification and paying actual copying costs, by visiting their offices, during normal business hours and on reasonable notice. You also have a right to submit a written request to the CRA for a copy of your file to be provided to you by certified mail or for a telephonic file summary. The CRA will provide trained personnel to explain to you the information furnished and can answer questions about information in your file, including any coded information. If you come to its offices in person, another person can join you, so long as that person can show proper identification. \u003cbr/\u003e MINNESOTA: You have a right, upon written requests to the CRA, to a complete and accurate disclosure of the nature and scope of any background check Rasier/Portier ordered about you. The CRA must provide you with this disclosure within 5 business days after receipt of your request or from when the report was requested by Rasier/Portier, whichever date is later. \u003cbr/\u003eNEW YORK: You have the right, upon written request, to be informed of whether Rasier/Portier requested a background check about you. Shown below is the CRA\u0027s address and telephone number. You may inspect and receive a copy of any such report by contacting the CRA.",
+							"title" : "Additional Background Check Disclosures"
+						} ]
+			};
+			window.BGCFormData = {
+				"_csrf_token" : "1448094015-01-m0r0Oo9eCT1AsvhKnE0Tle5b_0x-ich03TuZjEyClhA=",
+				"flow_type_id" : "52",
+				"driver_uuid" : "709aa72f-6044-4883-95f1-b62f07e9536c",
+				"country_id" : "1",
+				"signature" : "AJYC-1s92dV-2RVuOfWU90ekJ30zDDnOYw",
+				"timestamp" : "1448094016.76",
+				"has_accepted_background_check_full_name" : "Preeti Patil",
+			};
+		window.BGCTranslations = {
+				"signup.background_check.consent.agree" : "I agree and acknowledge",
+				"signup.background_check.consent.close" : "Close",
+				"signup.background_check.consent.title" : "Please review our background check disclosure and authorization to continue.",
+				"signup.background_check.request_copy" : "Receive a free copy of my background check report",
+				"signup.background_check.ssn.bullet1" : "Remains private - never shared",
+				"signup.background_check.ssn.bullet2" : "Information is safe and secure",
+				"signup.background_check.ssn.bullet3" : "No credit check - credit won\u2019t be affected",
+				"signup.background_check.ssn.continue" : "Continue",
+				"signup.background_check.ssn.label" : "Social Security Number",
+				"signup.background_check.ssn.title" : "To ensure driver and passenger safety, we perform a quick background check."
+			};-->
+		</script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/background-check-lite-v2.80d38b323606db2043538f414d10dd99.js"></script>
+</body>
+</html>
+

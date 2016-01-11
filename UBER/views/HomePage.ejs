@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<!--[if lte IE 8]>
+<html lang="en-US" class="no-js lt-ie9">
+<script type="text/javascript" src="/javascripts/vendor/polyfill.js"></script>
+
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-US" class="no-js">
+<!--<![endif]-->
+<head>
+<!-- 
+    What is this, you ask?
+      It's a shim for phantomJS since phantom does not have a bind function.
+-->
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Uber</title>
+<meta name="description"
+	content="Get a taxi, private car or rideshare from your mobile phone. Uber connects you with a driver in minutes. Use our app in cities around the world.">
+<meta name="viewport" content="width=device-width">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta http-equiv="cleartype" content="on">
+
+<!-- Stylesheets -->
+<link rel='stylesheet'
+	href='//d1a3f4spazzrp4.cloudfront.net/uber-fonts/2.0.1/fresh.css' />
+<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+<link rel='stylesheet' href='/stylesheets/uber.css' />
+<link rel='stylesheet' href='/stylesheets/uber1.css' />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/carousel.css' />
+</head>
+
+<body>
+	<div class="preloader js-preloader slideTry"></div>
+
+	<!-- This allows for opening and closing of the main nav -->
+
+	<div class="web global-container js-global-container ">
+
+		<nav class="global-nav js-global-nav">
+
+			<div class="actions yui3-g">
+				<a href="#"
+					class="close js-menu yui3-u-1-2 res-s-hidden ga-click-track"
+					data-ga="global-menu.close-button-click"> <span
+					class="icon-close"></span>
+				</a> <a href="/log-in"
+					class="signin yui3-u-1-2 res-s-hidden ga-click-track"
+					data-ga="global-menu.login-button-click"> </a> <a href="/sign-up"
+					class="js-app-store-btn signup yui3-u-1 ga-click-track"
+					data-ga="global-menu.login-button-click"> </a>
+			</div>
+
+			<p class="primary">
+				<a class="home ga-click-track" href="/"
+					data-ga="global-menu.home-tab-click"> </a> <a
+					class="cities ga-click-track" href="/cities"
+					data-ga="global-menu.cities-tab-click"> </a> <a
+					class="drivers ga-click-track" href="//partners.uber.com/drive"
+					data-ga="global-menu.driver-tab-click">r </a>
+			</p>
+
+
+		</nav>
+
+
+		<section class="site-wrapper js-site-wrapper ">
+			<div class="global-nav-overlay js-global-nav-overlay"></div>
+			<div class="head-fade"></div>
+
+			<header class="global-header js-global-header">
+
+
+				<div class="pull-left">
+					<section class="top-cta js-hidden js-top-cta">
+						<article class="driver-promo-cta">
+							<div class="yui3-g">
+								<div class="yui3-u-1-4 car-img-wrapper">
+									<div class="car-lineup-bg"></div>
+								</div>
+								<div class="yui3-u-1-2 driver-value-prop">
+									<h5>Want to drive with Uber?</h5>
+									<br>
+
+									<form method="get" action="/signUp">
+										<div class="yui3-u-1-4 btn-wrapper">
+											<button class=" btn ga-click-track"
+												data-ga="top-cta.driver-sign-up-button-click">
+												Become a driver</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</article>
+					</section>
+				</div>
+
+				<p class="pull-right actions res-s-hidden">
+
+					<a href="/mainLogin" class="ga-click-track js-login-link"
+						data-ga="global-header.login-button-click"
+						data-mp="landing_page.log_in_click"> Log In </a> <a
+						href="/signUpCust"
+						class="btn ga-click-track js-signup-or-dl-cta js-signup-btn"
+						data-ga="global-header.sign-up-button-click"> Sign Up </a>
+				</p>
+
+				<p class="pull-right actions res-m-hidden res-l-hidden">
+					<a href="/app"
+						class="btn ga-click-track js-signup-or-dl-cta js-signup-btn"
+						data-ga="global-header.download-mobile"> Download </a>
+				</p>
+
+				<div class="yui3-u-1-3 center block-center">
+					<a href="/" class="uber-logo ir ga-click-track"
+						data-ga="global-header.logo-click">Uber</a>
+				</div>
+			</header>
+
+			<script>
+				heroPhotos = [ {
+					"cta" : {
+						"content" : "Sign Up",
+						"link" : "//get.uber.com"
+					},
+					"headline" : "Your Ride, On Demand",
+					"heroType" : "left",
+					"image" : "slideTrial",
+					"subheadline" : "Transportation in minutes with the Uber app"
+				} ]
+			</script>
+
+			<section class="hero react-hero  ">
+				<div class="reactCarouselContainer ">
+					<div class="carousel-container ">
+						<div
+							class="carousel-container__slide carousel-container__slide--active">
+							<div>
+								<div class="hero-slide-container--left hero-slide-container">
+									<div>
+										<div class="hero-slide-image-viewport">
+											<div class="hero-slide-image "></div>
+										</div>
+										<div class="hero-slide__content--left hero-slide__content">
+											<h1 class="content__headline">Your Ride, On Demand</h1>
+											<h3
+												class="content__subheadline primary-font primary-font--semibold text--uppercase gamma">Transportation
+												in minutes with the Uber app</h3>
+											<a
+												class="content__cta btn btn--primary primary-font primary-font--semibold"
+												href="/signUpCust">Sign Up</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+</body>
+</html>
+

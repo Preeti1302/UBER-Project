@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    <script src="angularjs/signupAngularCust.js"></script>    
+    
+    <style>
+    .wrapper {
+    padding-top: 0;
+    }
+    header.contextual {
+    position: static;
+    background-color: #000;
+    padding: 24px 20px;
+    z-index: 1;
+    }
+    header.contextual .logo {
+    background: url(https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/logo-web-light@2x.463066c24e3dc1b129ac3a7e8c3590f1.png) left top no-repeat;
+    background-size: 167px 23px;
+    }
+    header .logo {
+    width: 167px;
+    height: 23px;
+    margin: 0 auto;
+    }
+    .signup-wrapper {
+    width: 680px;
+    margin: 0 auto;
+    }
+    body {
+    font-size: 14px;
+    line-height: 1.57;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    }
+    .signup-top {
+    height: 230px;
+    margin: 60px 0;
+    }
+    body, h1, h2, h3, h4, h5, h6 {
+    font-family: ff-clan-web-pro-wide;
+    }
+    .signup-top .signup-top-images {
+    display: inline-block;
+    width: 23%;
+    }
+    .signup-top .signup-top-text {
+    display: inline-block;
+    width: 73%;
+    vertical-align: top;
+    margin-top: 40px;
+    }
+    .signup-top .signup-top-images .signup-top-phones {
+    background: url(https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/phones-signup@2x.3bb77cd440b5c43c0de1236da68db201.png) left top no-repeat;
+    background-size: 220px 238px;
+    height: 235px;
+    width: 212px;
+    margin-left: -55%;
+    background: url(https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/phones-signup@1x.a391e0c6b53443a81cecc543cd8240f9.png) left top no-repeat;
+    }
+
+    .signup-top .signup-top-text .signup-top-text-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    }
+    .signup-top .signup-top-text .signup-top-text-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #1fbad6;
+    }
+    
+    p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    }
+    .form-container {
+    width: 70%;
+    margin: 0 auto;
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+    }
+    form {
+    display: block;
+    margin-top: 0em;
+    }
+    .signup-form-section {
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: -25px;
+    }
+    
+    .signup-form-section .signup-form-section-title {
+    font-size: 22px;
+    font-weight: 400;
+    }
+    .signup-form-section .signup-form-section-required {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    }
+    .form-group {
+    width: 100%;
+    padding-bottom: 19px;
+    font-family: ff-clan-web-pro-wide,sans-serif;
+    }
+    .form-group label {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 8px;
+    color: #666;
+    font-weight: 500;
+    }
+    .form-group label, .sticker, h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    }
+    .form-group input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+    .form-group button, .form-group input, .form-group select {
+    height: 40px;
+    width: 100%;
+    line-height: 20px;
+    padding: 2px 0 0 12px;
+    font-size: 14px;
+
+    }
+    button, input, select, textarea {
+    font-family: inherit;
+    }
+    .form-group {
+    width: 100%;
+    padding-bottom: 19px;
+    font-family: ff-clan-web-pro-wide,sans-serif;
+    }
+    .signup-form-section {
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: -25px;
+    }
+    .signup-form-section .signup-form-section-title {
+    font-size: 22px;
+    font-weight: 400;
+    }
+    .signup-form-section .signup-form-section-number {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 36px;
+    height: 36px;
+    padding: 7px 0 0 12px;
+    font-size: 14px;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 10;
+    }
+    .signup-form-section .signup-form-section-line {
+    position: absolute;
+    top: 0;
+    left: -57px;
+    width: 36px;
+    height: 100%;
+    border-left: solid 1px #f1f1f1;
+    }
+    .signup-form-section {
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: -25px;
+    }
+
+    .row {
+    margin-left: -10px;
+    margin-right: -10px;
+    }
+    .col-md-9 {
+    width: 75%;
+    }
+    .col-md-1, .col-md-10, .col-md-11, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+    }
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    .full-row-xs {
+    margin-bottom: 20px;
+    }
+    .col-md-8 {
+    width: 66.66666666666666%;
+    }
+    .col-md-3 {
+    width: 25%;
+    }
+    .col-md-6 {
+    width: 50%;
+    }
+    .form-group select {
+    background: url(https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/signup-lite-dropdown@2x.e06555e9dd924012e8ff5ac45a9e185b.png) right 7px top 12px no-repeat #fff;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-size: 6px 14px;
+    }
+    option:disabled, select[disabled] > option {
+    color: graytext;
+    }
+    user agent stylesheetoption {
+    font-weight: normal;
+    display: block;
+    padding: 0px 2px 1px;
+    white-space: pre;
+    min-height: 1.2em;
+    }
+    .form-group select.gray {
+    color: #c2c2c2;
+    font-weight: 400;
+    }
+    .col-md-4 {
+    width: 33.33333333333333%;
+    }
+    .add-a-promo-code {
+    padding: 20px 0 10px;
+    color: #1fbad6;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    }
+    .add-a-promo-code, .btn, .error-list, .form-group label, .sticker, h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    }
+    .submit {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+    }
+    .signup-form-section {
+    position: relative;
+    }
+    .col-md-12 {
+    width: 100%;
+    }
+    .submit .signup-form-section-number {
+    background: url(https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/signup-lite-check-gray@2x.c15282c2e46b3d21a16d9e6a8f928852.png) center center no-repeat #fff;
+    background-size: 14px 14px;
+    padding: 0;
+    }
+    .signup-form-section .signup-form-section-number {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 50%;
+    z-index: 10;
+    }
+    .agree-terms {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    }
+    .submit .loader {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    }
+    .invisible, .submit .loader {
+    visibility: hidden;
+    }
+    .btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    }
+    .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: .65;
+    }
+    .form-group button, .form-group input, .form-group select {
+    height: 40px;
+    width: 100%;
+    line-height: 20px;
+    padding: 2px 0 0 12px;
+    font-size: 14px;
+    }
+    .submit button.disabled {
+    background-color: #c1ecf4;
+    pointer-events: none;
+    }
+    .submit button {
+    height: 50px;
+    }
+    .form-group button, .form-group input, .form-group select {
+
+    width: 100%;
+    line-height: 20px;
+    padding: 2px 0 0 12px;
+    font-size: 14px;
+    }
+    .btn-primary {
+    font-family: ff-clan-web-pro-wide,sans-serif;
+    background-color: #1fbad6;
+    color: #fff;
+    }
+    .btn {
+    display: block;
+    border: 0;
+    text-align: center;
+    }
+    button{
+    cursor: pointer;
+    margin: 0;
+    align-items: flex-start;
+    font: 11px BlinkMacSystemFont;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    }
+    .submit .signup-form-section-notice {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    font-weight: 500;
+    }
+    .form-group select {
+    background: url(https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/signup-lite-dropdown@2x.e06555e9dd924012e8ff5ac45a9e185b.png) right 7px top 12px no-repeat #fff;
+    background-size: 6px 14px;
+    }
+    .form-group select {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-weight: 500;
+    }
+    .submit .signup-form-section-notice .star {
+    color: #1fbad6;
+    }
+    .form-group.required label::before {
+    content: "*";
+    padding-right: 4px;
+    font-size: 16px;
+    color: #1fbad6;
+    }
+    :before {
+    box-sizing: border-box;
+    }
+
+    .signup-form-section .signup-form-section-required::before {
+    content: "*";
+    padding-right: 4px;
+    font-size: 16px;
+    color: #1fbad6;
+    }
+
+
+    </style>
+    <title></title>
+</head>
+<body class=" " ng-app="UberApp" ng-controller="UberCtrl">
+    <section class="wrapper">
+        <header class="contextual">
+            <div class="logo"></div>
+        </header>
+        <section class="content">
+            <div class="signup-wrapper">
+                <section class="signup-top">
+                    <div class="signup-top-images">
+                        <div class="signup-top-phones"></div>
+                    </div>
+                    <div class="signup-top-text">
+                        <div class="signup-top-text-title">
+                            Sign Up to Ride
+                        </div>
+                        <div class="signup-top-text-subtitle">
+                            <p>Welcome to Uber, the easiest way to get around at the tap of a button.</p>
+                            <p>Create your account and get moving in minutes.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="signup-form">
+                    <article   autocomplete="on" class="form-vertical" >
+                            <div class="signup-form-section account">
+                                <div class="signup-form-section-title">
+                                    <p>Account</p>
+                                </div>
+                                <div class="signup-form-section-required">
+                                    Required
+                                </div>
+                                <div class="signup-form-section-number blue">
+                                    1
+                                </div>
+                                <div class="signup-form-section-line"></div>
+                                <div class="form-group required">
+                                    <label for="email">Email</label> <input id="email" name="email" placeholder="name@example.com" type=
+                                    "email" value="" ng-model="email"
+                                    >
+                                    
+                                </div>
+                                <div class="form-group required">
+                                    <label for="password">Password</label> <input id="password" name="password" placeholder=
+                                    "At least 5 characters" type="password" value="" ng-model="password">
+                                    
+                                </div>
+                            </div>
+                            <div class="signup-form-section profile">
+                                <div class="signup-form-section-title">
+                                    <p>Profile</p>
+                                </div>
+                                <div class="signup-form-section-number">
+                                    2
+                                </div>
+                                <div class="signup-form-section-line"></div>
+                                <div class="form-group required">
+                                    <label for="name">Name</label>
+                                    <div class="row form-row">
+                                        <div class="col-md-6 col-xs-6 md-push-right-half sm-push-right-half xs-push-right-half">
+                                            <input id="first_name" name="first_name" placeholder="First Name" type="text" value="" ng-model="first_name">
+                                            <div class="error-notice"></div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-6 md-push-left-half xs-push-left-half">
+                                            <input id="last_name" name="last_name" placeholder="Last Name" type="text" value="" ng-model="last_name">
+                                            <div class="error-notice"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group js-mobile-country required mobile-number">
+                                    <label for="mobile">Mobile Number</label> <input id="mobile" name="mobile" placeholder="(201) 555-5555"
+                                    type="tel" value="" ng-model="mobile">
+                                </div>
+                                <div class="form-group required">
+                                    <label for="language">Language</label> <input id="lang" name="lang" placeholder="English" type=
+                                    "text" value="" ng-model="lang">
+                                </div>
+                            </div>
+                            <div class="signup-form-section payment">
+                                <div class="signup-form-section-title">
+                                    <p>Payment</p>
+                                </div>
+                                <div class="signup-form-section-number">
+                                    3
+                                </div>
+                                <div class="signup-form-section-line"></div>
+                                <div class="credit-card-info">
+                                    <div class="row form-row">
+                                        <div class="col-md-9 col-xs-9 xs-push-right-half">
+                                            <div class="form-group required">
+                                                <label for="card_number">Credit Card Number</label> <input id="card_number" name=
+                                                "card_number" placeholder="1234 5678 9012 3456" type="tel" value="" ng-model="card_number">
+                                                <div class="credit-card-icon"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-xs-3 xs-push-left-half">
+                                            <div class="form-group required">
+                                                <label for="card_code">CVV</label> <input id="card_code" name="card_code" placeholder="123"
+                                                type="tel" value="" ng-model="card_code">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <div class="row form-row">
+                                            <div class="col-md-8 col-xs-12 full-row-xs">
+                                                <label for="card_expiration">Expiration Date</label>
+                                                <div class="row form-row">
+                                                    <div class="col-md-6 col-xs-6 xs-push-right-half col-xs-row">
+                                                        <input id="card_expiration_month" name="card_expiration_month" placeholder="01"
+                                                type="number" value="" ng-model="card_expiration_month">
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6 col-xs-6 xs-push-left-half col-xs-row">
+                                                     <input id="card_expiration_year" name="card_expiration_year" placeholder="2015"
+                                                type="number" value="" ng-model="card_expiration_year">   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-xs-12">
+                                                <label for="billing_zip">Postal Code</label> <input id="billing_zip" name="billing_zip"
+                                                placeholder="94103" type="text" value="" ng-model="billing_zip">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-a-promo-code">
+                                    Add a Promo Code
+                                </div>
+                                <div class="signup-form-section submit">
+                                    <div class="col-md-12">
+                                        <img class="loader defer_image_loading" data-src=
+                                        "https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/gfx/loader.a5b022ab0fad102f521a454df3ceb117.gif"
+                                        src=
+                                        "https://d1a3f4spazzrp4.cloudfront.net/free-candy/images/gfx/loader.a5b022ab0fad102f521a454df3ceb117.gif">
+                                        <div class="form-group">
+                                            <button class="btn btn-primary js-submit" type="submit" ng-click="signup();">Create Account</button>
+                                        </div>
+                                        <div class="signup-form-section-notice">
+                                            Please fill out all required (<span class="star">*</span>) fields.
+                                        </div>
+                                    </div>
+                                    <div class="signup-form-section-number"></div>
+                                </div>
+                                <div class="form-group agree-terms">
+                                    <p>By clicking Create Account , you agree to Uber's <a href="https://www.uber.com/legal/terms">Terms
+                                    and Conditions</a> and <a href="https://www.uber.com/legal/privacy">Privacy Policy</a>.</p>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </section>
+    
+</body>
+</html>

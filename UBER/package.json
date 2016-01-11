@@ -1,0 +1,13 @@
+{
+  "name": "UBER",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "*",
+    "express": "3.21.2",
+    "gridfs-stream": "^1.1.1"
+  }
+}

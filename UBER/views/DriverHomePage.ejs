@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" dir="ltr">
+<head prefix="og:http://ogp.me/ns#">
+<script	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Driver Partner Dashboard | Uber</title>
+<!-- <link rel="shortcut icon"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/images/favicon.3eb352c8f26c2652495fa86bd0e29063.ico" />-->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/main.0ffdbda30a579e1d1dba3afb6ff61adb.css">
+<meta name="description"
+	content="Manage your Uber Driving Partner account.">
+<link rel='stylesheet'
+	href='https://d1a3f4spazzrp4.cloudfront.net/uber-fonts/2.0.1/fresh.css' />
+<link rel='stylesheet' href='/stylesheets/driverUber.css' />
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/onboarding.2d680666a6b507e0761f8694f3585aee.css">
+<link
+	href="//d1a3f4spazzrp4.cloudfront.net/uber-icons/3.0.0/uber-icons.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/vehicle/vehicle_lite.46c289a0cf8cba7a151f7f6db75317e3.css">
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/onboarding_superfine.2f451f0e14db9cffe04e9bf5ec003972.css">
+	<script src="angularjs/uberAngular.js"></script>
+</head>
+<body ng-app="UberApp" ng-controller="UberCtrl">
+	<div class="header position--fixed soft-small" id="header">
+
+		<!-- from here -->
+		<div class="layout layout--middle one-whole" >
+			<div class="layout__item float-left two-thirds portable-one-whole">
+				<span><i
+					class="icon icon_uber-u header__uber-logo text--white"></i></span><span
+					class="push-small--left text--white align--middle text--uppercase delta">Welcome to Uber : <%= data[0].firstName %> <%= data[0].lastName %></span>
+			</div>
+			<div class="layout__item one-third portable-one-whole text-right">
+				<a
+					class="referral-button btn btn--tiny btn--outline push--right portable-flush primary-font--bold" href="/logout">Logout</a>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="body-section primary-font with-subheader">
+		<div id="sidebar">
+			<div class="dashboard-drawer">
+				<ul class="dashboard-nav">
+					<li class="dashboard-nav__item active"><a href="/user"
+						class="dashboard-nav__link"> <span
+							class="icon icon_car-uberx dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Vehicle Information</span></a>
+						<ul class="dashboard-nav__submenu flush">
+						</ul></li>
+					<li class="dashboard-nav__item"><a href="/background-check"
+						class="dashboard-nav__link"> <span
+							class="icon icon_id-card dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Background Check</span></a>
+						<ul class="dashboard-nav__submenu flush">
+						</ul></li>
+					<li class="dashboard-nav__item"><a href="/documents"
+						class="dashboard-nav__link"> <span
+							class="icon icon_file dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Document Upload</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item"><a href="/video"
+						class="dashboard-nav__link"> <span
+							class="icon icon_picture dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Welcome Video</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-section clearfix">
+			<div class="step-content step-content-vehicle-info-lite">
+				<div class="content-body">
+					<div class="vehicle-gate">
+						<form >
+							<div data-js="messages" class="hidden"></div>
+							<input type="hidden" name="_csrf_token"
+								value="1448090692-01-aNBeS08NBU3CMX5WXo4_N427dWxSdPaWeC51xMHFsCA=" />
+							<div class="form-group soft">
+								<div class="gamma primary-font--semibold push-tiny--bottom">Ready
+									to drive in San Francisco Bay Area?</div>
+								<div>
+									<p class="push-small--bottom">To partner with Uber, your
+										vehicle must:</p>
+									<ul>
+										<li class="push-tiny--bottom">Be 2000 or newer</li>
+										<li class="push-tiny--bottom">Have 4 or more doors</li>
+										<li class="push-tiny--bottom">Not be salvaged</li>
+									</ul>
+									
+									<input type="text" value="" name="vehicle" id="vehicle"
+													ng-model="vehicle" placeholder="Enter your Vehicle Number" required><br>
+								</div>
+								<div class="form-group ">																		
+									<div class="submit">
+										<button data-dashboard-continue type="submit" class="button" ng-click="vehicleValidate();">Continue</button>
+									</div>
+								</div>
+							</div>
+							<div class="push--top push--left push--right">
+								<div
+									class="gamma primary-font--semibold push-tiny--bottom push-large--top">
+									Need a car? Apply to lease a car starting at $99 per week<sup>1</sup>
+								</div>
+								<div class="epsilon">
+									<ul>
+										<li class="push-tiny--bottom">Only $250 deposit required</li>
+										<li class="push-tiny--bottom">All credit levels eligible
+											to apply</li>
+										<li class="push-tiny--bottom">Unlimited mileage</li>
+									</ul>
+								</div>
+								<div class="submit soft-huge--bottom push-huge--bottom">
+									<a href="/dashboard/vehicle-solutions/" class="button empty"
+										id='learn-more-vehicle-solutions'>Learn More</a>
+								</div>
+								<div class="push-huge--top">&nbsp;</div>
+								<div class="push-huge--top soft-huge--top">
+									<p class="small push-huge--top flush--bottom">
+										<a name="footer"></a>1:
+									</p>
+									<p class="small flush--bottom">- Weekly payments exclude
+										taxes and fees</p>
+									<p class="small flush--bottom">
+										- To return the vehicle after the first 30 days, a two week
+										notice and a $250 return fee (which can be offset by your $250
+										deposit) are required. See sample lease terms <a
+											href="http://t.uber.com/xclsample" target="_blank">here</a>
+									</p>
+									<p class="small flush--bottom">
+										- See full list of discounts <a
+											href="http://t.uber.com/vehiclediscounts" target="_blank">here</a>
+									</p>
+								</div>
+								<div class="clearall"></div>
+							</div>
+						</form>
+					</div>
+					<div class="no-vehicle-content hidden">
+						<div class="push--top push--left push--right">
+							<p class='push-small--bottom'>Thank you for signing up, but
+								you must have a car to drive with Uber at this time. We will
+								keep your information on file and get in touch if we are able to
+								offer other options in the future.</p>
+							<div class="clearall"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/analytics.3fcf9f4e2330deaa7efa162289df9e1a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/config.12a9959a1bdf7bcf0055e0f61fe3285a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/core.0e83e860909b037c9135ae70b145e2d8.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/vendor/phoneparser.9f4d21759fadd3db595bc16134bf2c02.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/you-tube-api-player.a702d2e2a090f8b2b8a673d6b35257b1.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/dashboard.1ead9aa417ac42699711cd318041cb52.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/dashboard_lite.a85b0eeb0d73495757942cf8b5139e8a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/header.00c9ac6d95c29457557e5a07fd8aeeb1.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/vehicle_lite.5374b1a4c4c1bb738b72c0fa9e0d1ee6.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>

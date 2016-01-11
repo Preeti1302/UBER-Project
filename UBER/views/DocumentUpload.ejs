@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" dir="ltr">
+<!--<![endif]-->
+<head prefix="og:http://ogp.me/ns#">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Document Upload | Uber</title>
+<link rel="shortcut icon"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/images/favicon.3eb352c8f26c2652495fa86bd0e29063.ico" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+<link rel="stylesheet"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/main.0ffdbda30a579e1d1dba3afb6ff61adb.css">
+
+<meta name="description"
+	content="Manage your Uber Driving Partner account.">
+
+
+<!-- Raven for Sentry -->
+<script src="//cdn.ravenjs.com/1.1.15/jquery,native/raven.min.js"></script>
+
+<link rel='stylesheet'
+	href='https://d1a3f4spazzrp4.cloudfront.net/uber-fonts/2.0.1/fresh.css' />
+<link rel='stylesheet' href='/stylesheets/documentUber.css' />
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/onboarding.2d680666a6b507e0761f8694f3585aee.css">
+<link rel="stylesheet" type="text/css"
+	href="https://d1a3f4spazzrp4.cloudfront.net/web-p2/stylesheets/onboarding/onboarding_superfine.2f451f0e14db9cffe04e9bf5ec003972.css">
+<link
+	href="//d1a3f4spazzrp4.cloudfront.net/uber-icons/3.0.0/uber-icons.css"
+	rel="stylesheet">
+<input type="hidden" name="_csrf_token"
+	value="1448152913-01-M4NxMECHHQL7WVS6emwSFYTphHfvJv2L9GdAegqWwec=">
+</head>
+<body>
+	<div class="header position--fixed soft-small" id="header">
+		<div
+			class="layout__item one-half portable-five-sixths float-left hard">
+			<span><i
+				class="icon icon_uber-u header__uber-logo text--white"></i></span> <span
+				class="push-small--left text--white align--middle text--uppercase delta">Document
+				Upload</span>
+		</div>
+	</div>
+
+	<div class="body-section primary-font with-subheader">
+
+		<div id="sidebar">
+
+			<div class="dashboard-drawer">
+				<ul class="dashboard-nav">
+					<li class="dashboard-nav__submenu flush"><a href="/user"
+						class="dashboard-nav__link"> <span
+							class="icon icon_car-uberx dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Vehicle Information</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item"><a href="/background-check"
+						class="dashboard-nav__link"> <span
+							class="icon icon_id-card dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Background Check</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item active"><a href="/documents"
+						class="dashboard-nav__link"> <span
+							class="icon icon_file dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Document Upload</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+					<li class="dashboard-nav__item"><a href="/video"
+						class="dashboard-nav__link"> <span
+							class="icon icon_picture dashboard-nav__icon"></span> <span
+							class="dashboard-nav__text">Welcome Video</span></a>
+						<ul class="dashboard-nav__submenu flush"></ul></li>
+				</ul>
+			</div>
+		</div>
+
+		<form action="/liscUpload" method="post" enctype="multipart/form-data">
+			<div class="content-section clearfix">
+				<div class="step-content step-content-upload-documents">
+					<div class="content-body">
+						<div id="document_upload_root">
+							<div>
+								<div class="doc-wrapper position--relative">
+									<div>
+										<div class="doc-content position--relative">
+											<div class="doc-prompt"></div>
+												
+											<input type="file"
+												class="drag-and-drop display--block one-whole position--absolute"
+												id="img111"  accept="image/*,.pdf,.doc,.docx"
+												name="img111">
+												
+											<div class="doc-info push-small">
+												<h3 class="text--center push--top">
+													<span>Drag a photo of your</span> <span
+														class="bold display--block">CA Drivers License</span>
+												</h3>
+												<div class="doc-info-img center-block drivers_license"></div>
+												<p class="push--top text--center push-huge--bottom">
+													<span class="text-uber-white">Once completed, take a
+														picture of the document with your phone. Email the photo
+														to yourself. Drag the image here for upload. </span> <span
+														class="display--block"> <a class="text--uppercase"
+														href="#">Browse computer</a>
+													</span>
+												</p>
+											
+											</div>
+										</div>
+											 <button data-dashboard-continue type="submit" class="button"  align-self="center">Upload the image</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+<!-- devanshi -->
+
+<!-- <form action="/liscUpload" method="post" enctype="multipart/form-data">
+
+<input type="file"  id="img111" name="img111">
+<input type="submit" value="sub"/>
+</form>-->
+
+
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/analytics.3fcf9f4e2330deaa7efa162289df9e1a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/config.12a9959a1bdf7bcf0055e0f61fe3285a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/core.0e83e860909b037c9135ae70b145e2d8.js"></script>
+
+	<script type="text/javascript">
+		if (window.mixpanel && window.mixpanel.identify) {
+			mixpanel.identify('709aa72f-6044-4883-95f1-b62f07e9536c');
+		}
+
+		window.headerTitle = "Document Upload";
+		window.isMobileDevice = false;
+		window.userDevice = "desktop";
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/vendor/phoneparser.9f4d21759fadd3db595bc16134bf2c02.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/you-tube-api-player.a702d2e2a090f8b2b8a673d6b35257b1.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/dashboard.1ead9aa417ac42699711cd318041cb52.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/dashboard_lite.a85b0eeb0d73495757942cf8b5139e8a.js"></script>
+	<script
+		src="https://d1a3f4spazzrp4.cloudfront.net/web-p2/scripts/onboarding/header.00c9ac6d95c29457557e5a07fd8aeeb1.js"></script>
+</body>
+</html>

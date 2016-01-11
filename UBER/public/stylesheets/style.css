@@ -1,0 +1,16 @@
+body {
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	
+}
+div.slideTry{
+	background-image: url(/images/uber-image2.jpg);
+	background-repeat:no-repeat;
+	background-position: center top;
+    background-size: cover;
+}
+a {
+	color: #00B7FF;
+}
+
+
